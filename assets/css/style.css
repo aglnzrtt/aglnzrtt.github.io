@@ -63,15 +63,31 @@ margin-right: auto;
 }
 
 .navbar a {
-position: relative;
-font-size: 1.7rem;
-color: var(--main-color);
-font-weight: 500;
-margin-right: 3.5rem;
+  position: relative;
+  font-size: 1.7rem;
+  color: var(--main-color);
+  font-weight: 500;
+  margin-right: 3.5rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+
+.navbar a.active {
+  border: 2px solid var(--main-color);
+  background-color: transparent;
+  color: var(--hover-color); 
+  
+}
+
+.navbar a:hover {
+  color: var(--hover-color, #fc83fe); 
 }
 
 #darkMode-icon {
-font-size: 2.1rem;
+font-size: 2.2rem;
 color: var(--main-color);
 cursor: pointer;
 }
@@ -205,14 +221,14 @@ span {
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  flex-wrap: wrap; /* agar bisa patah ke bawah di layar kecil */
+  flex-wrap: wrap; 
 }
 
 .lanyard-bg {
   position: absolute;
   width: 700px;
   height: 700px;
-  background: url('imgs/bg.png') no-repeat center/cover;
+  background: url('../imgs/bg.png') no-repeat center/cover;
   border-radius: 30px;
   z-index: -1;
 }
@@ -283,7 +299,7 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('imgs/satu.png') no-repeat center/cover;
+  background: url('../imgs/satu.png') no-repeat center/cover;
 }
 
 .card-back a {
@@ -432,6 +448,54 @@ span {
   border-radius: 50%;
 }
 
+/* Contact */
+.contact {
+  min-height: auto;
+  padding-bottom: 7rem;
+}
+
+.contact h2 {
+  margin-bottom: 3rem;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--bg-color);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+  box-shadow: 0 0.1rem 0.5rem var(--shadow-color);
+}
+
+.contact form .input-box input {
+  width: 49%;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
 /* Footer */
 .footer {
   display: flex;
@@ -522,7 +586,7 @@ span {
   }
 
   .lanyard-container {
-    order: -1; /* pindahkan ke atas */
+    order: -1; 
     position: static;
     margin-bottom: 150px;
     margin-top: -35px;
